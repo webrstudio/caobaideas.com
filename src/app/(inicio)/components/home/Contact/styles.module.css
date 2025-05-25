@@ -1,0 +1,19 @@
+.contactCard {
+  align-items: center;
+  background: var(--white-primary);
+  box-shadow: -15px 13px 0px 2px var(--black-primary);
+  -webkit-box-shadow: -15px 13px 0px 2px var(--black-primary);
+  -moz-box-shadow: -15px 13px 0px 2px var(--black-primary);
+  border:1px solid var(--black-primary);
+  color: var(--black-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  padding:2rem;
+  text-decoration: none;
+  width: 100%;
+}
+.contactCard svg{
+    font-size:30px;
+}

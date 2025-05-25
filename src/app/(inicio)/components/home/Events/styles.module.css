@@ -1,0 +1,17 @@
+.imageEvent{
+    display:flex;
+    height:100%;
+    width:100%;
+}
+.imageEvent img{
+    border-radius: 9px;
+    height:100%;
+    filter: drop-shadow(-8px 5px 2px #bfbfbf);
+    object-fit: contain;
+    width:100%;
+}
+@media (min-width:240px) and (max-width:900px){
+    .imageEvent{
+       height:100%;
+    }
+}

@@ -1,0 +1,10 @@
+.containerWrapper{
+    overflow-x: hidden;
+    padding: 8rem 0;
+}
+.backgroundBlack{
+   background: var(--black-primary);
+}
+.backgroundPurple h2{
+    color:var(--white-primary);
+}

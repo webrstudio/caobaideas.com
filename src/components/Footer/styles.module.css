@@ -1,0 +1,14 @@
+.footerWrapper{
+    background: var(--black-primary);
+    color:var(--white-primary);
+    display:flex;
+    flex-direction: column;
+    gap:0.5rem;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+.footerWrapper a{
+    color: var(--gray-primary);
+    font-size: 0.8rem;
+    width:auto;
+}

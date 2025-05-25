@@ -1,0 +1,13 @@
+.titleWrapper{
+    font-family: "Afacad", sans-serif;;
+    font-size:35px;
+    font-weight: 600;
+    overflow-x: hidden;
+    padding-bottom:8rem;
+    text-align: start;
+}
+@media (min-width:240px) and (max-width:900px){
+    .titleWrapper{
+        font-size: 30px;
+    }
+}

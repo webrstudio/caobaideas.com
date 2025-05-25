@@ -1,0 +1,69 @@
+/*font*/
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+/*reset css*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 1.1rem;
+}
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+/*ui colors*/
+:root {
+  --black-primary: #070707;
+  --blue-primary: #060e86;
+  --box-shadow: #0000005d;
+  --gray-primary: #6b6b6b;
+  --purple-primary: #54429f;
+  --purple-secondary: #765cdf;
+  --red-primary: #e82925;
+  --white-primary: #fffbf9;
+  --white-secondary: #e2e2e2;
+  --yellow-primary: #ffde59;
+  --yellow-secondary: #ffde59;
+}
+/*flexContainer*/
+.flexContainer {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 90%;
+}
+.smallContainer {
+  margin: 0 auto;
+  width: 60%;
+}
+@media (min-width: 240px) and (max-width: 900px) {
+  .flexContainer,
+  .smallContainer {
+    width: 90%;
+  }
+}
+/*boxShadow*/
+.boxShadow {
+  box-shadow: 1px 2px 10px var(--box-shadow);
+}
+/*borderRadius*/
+.borderRadius {
+  border-radius: 9px;
+}
+/*light mode*/
+.lightMode {
+  background: var(--white-primary);
+  color: var(--black-primary);
+  transition: all 300ms ease;
+}
+/*dark mode*/
+.darkMode{
+  background: var(--black-primary);
+  color: var(--white-primary);
+  transition: all 300ms ease;
+}
