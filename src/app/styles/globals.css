@@ -64,6 +64,6 @@ html {
 /*dark mode*/
 .darkMode{
   background: var(--black-primary);
-  color: var(--white-primary);
+  color: var(--white-secondary);
   transition: all 300ms ease;
 }

@@ -1,8 +1,9 @@
 "use client";
+import Link from "next/link";
 import { talent } from "./consts";
 import styles from "./styles.module.css";
 import { Slide } from "react-awesome-reveal";
-import { Container, Title, GridContainer } from "@/components";
+import { Title, GridContainer } from "@/components";
 
 export const Talent = () => {
   return (
@@ -17,11 +18,19 @@ export const Talent = () => {
           {talent.map((talent) => (
             <Slide triggerOnce key={talent.id}>
               <div className={styles.talentCard}>
-                <figure className={styles.talentImage}>
+                <Link href='' className={styles.talentImage}>
                   <img src={talent.image} />
-                </figure>
-                <span className={styles.planTitle}>{talent.name}</span>
-                <ul className={styles.planBenefits}></ul>
+                </Link>
+                <div className={styles.talentDescription}>
+                  <ul>
+                    {talent.social.map((social, i) => (
+                      <li key={i}>
+                        <a href={social.link} target='_blank'>{social.icon}</a>
+                      </li>
+                    ))}
+                  </ul>
+                  <span className={styles.talentName}>{talent.name}</span>
+                </div>
               </div>
             </Slide>
           ))}

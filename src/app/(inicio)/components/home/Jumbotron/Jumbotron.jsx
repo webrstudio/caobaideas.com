@@ -6,13 +6,12 @@ import { Slide } from "react-awesome-reveal";
 
 export const Jumbotron = () => {
   const [currentImage, setCurrentImage] = useState(0);
-  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIsLoaded(false);
       setCurrentImage((prev) => (prev + 1) % images.length);
-    }, 900);
+    }, 2500);
+
     return () => clearInterval(interval);
   }, []);
 
@@ -27,16 +26,11 @@ export const Jumbotron = () => {
             </p>
           </Slide>
         </div>
-        <div className={styles.jumbotronImageWrapper}>
-          <img
-            src={images[currentImage].src}
-            alt=""
-            onLoad={() => setIsLoaded(true)}
-            className={`${styles.jumbotronImage} ${
-              isLoaded ? styles.visible : styles.hidden
-            }`}
-          />
-        </div>
+        <div
+          key={currentImage}
+          className={styles.jumbotronImageWrapper}
+          style={{ backgroundImage: `url(${images[currentImage].src})` }}
+        />
       </div>
     </section>
   );
