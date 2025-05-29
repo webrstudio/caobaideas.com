@@ -18,6 +18,6 @@ export const metadata = {
   title: "  CAOBA IDEAS - INICIO",
   description: "",
   icons: {
-    icon: "/assets/images/logo/logo.png",
+    icon: "/assets/images/logo/icon.png",
   },
 };
