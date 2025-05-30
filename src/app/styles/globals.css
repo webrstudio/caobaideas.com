@@ -20,6 +20,7 @@ html {
 /*ui colors*/
 :root {
   --black-primary: #070707;
+   --black-secondary: #1c1c1c;
   --blue-primary: #060e86;
   --box-shadow: #0000005d;
   --gray-primary: #6b6b6b;
