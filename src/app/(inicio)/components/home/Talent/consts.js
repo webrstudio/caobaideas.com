@@ -5,6 +5,7 @@ export const talent = [
     id: 1,
     name: "El Jaivo",
     image: "/assets/images/talent/jaivo.png",
+    link:'/talento/el-jaivo',
     social: [
       {
         icon: <FaFacebook />,
@@ -24,6 +25,7 @@ export const talent = [
     id: 2,
     name: "Randy",
     image: "/assets/images/talent/randy.png",
+    link:'/talento/randy',
     social: [
       {
         icon: <FaFacebook />,
@@ -43,6 +45,7 @@ export const talent = [
     id: 3,
     name: "Willyn K Rollo",
     image: "/assets/images/talent/willyn.png",
+    link:'/talento/willyn-k-rollo',
     social: [
       {
         icon: <FaFacebook />,
@@ -62,6 +65,7 @@ export const talent = [
     id: 4,
     name: "Patitas K Rollo",
     image: "/assets/images/talent/patitas.png",
+    link:'/talento/patitas-k-rollo',
     social: [
       {
         icon: <FaFacebook />,
@@ -81,6 +85,7 @@ export const talent = [
     id: 5,
     name: "Alita",
     image: "/assets/images/talent/alita.png",
+    link:'/talento/alita',
     social: [
       {
         icon: <FaFacebook />,
@@ -100,6 +105,7 @@ export const talent = [
     id: 6,
     name: "Meñike",
     image: "/assets/images/talent/menike.png",
+    link:'/talento/menike',
     social: [
       {
         icon: <FaFacebook />,

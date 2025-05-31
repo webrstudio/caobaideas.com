@@ -1,20 +1,24 @@
+import axios from "axios";
 import { Talent } from "../components/talent";
 
-export default function({params}){
-    console.log(params)
-    return (
-        <>
-          <Talent />
-        </>
-    )
+export default function ({ params }) {
+  return (
+    <>
+      <Talent url={params.id}/>
+    </>
+  );
 }
 
 export async function generateStaticParams() {
-  return [
-    { id: "1" },
-    { id: "2" },
-    { id: "3" },
-  ];
+  try {
+    const response = await axios.get(
+      `${process.env.NEXT_PUBLIC_API}/talents/getAllTalents/index.php`
+    );
+    const paths = response.data.map((e) => {
+      return {id: e.talento_url}
+    });
+    return paths;
+  } catch (error) {}
 }
 
 export const metadata = {

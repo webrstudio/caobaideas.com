@@ -1,29 +1,35 @@
 "use client";
+import { useFetch } from "@/hooks";
 import styles from "./styles.module.css";
 import { Container } from "@/components";
 import { Slide } from "react-awesome-reveal";
 
-export const Talent = () => {
+export const Talent = ({ url }) => {
+  const { error, data, isLoading } = useFetch({
+    url: `${process.env.NEXT_PUBLIC_API}/talents/getTalentById/index.php?talento_url=${url}`,
+  });
   return (
     <Container>
       <div className={`${styles.talentWrapper} smallContainer`}>
-        <Slide triggerOnce>
-          <div className={`${styles.talentDescription}`}>
-            <figure>
-              <img src="/assets/images/talent/jaivo.png" />
-            </figure>
-            <h3 className={styles.talentName}>El Jaivo</h3>
-            <p>
-              El terror de las viejitas, líder de Los Mesmos y un cómico por
-              naturaleza; su carisma y buen humor te harán pasar un increíble
-              momento de diversión… con un toque de picardía.
-            </p>
-            <iframe
-                src="https://www.youtube.com/embed/woFs97Z6YXI"
-                className={styles.talentVideo}
-            />
-          </div>
-        </Slide>
+        {!data ? null : (
+          <Slide triggerOnce>
+            <div className={`${styles.talentDescription}`}>
+              <figure>
+                <img
+                  src={`${process.env.NEXT_PUBLIC_SERVER_NAME}/${data.talento_imagen}`}
+                />
+              </figure>
+              <h3 className={styles.talentName}>{data.talento_nombre}</h3>
+              <p>{data.talento_descripcion}</p>
+              {!data.talento_video ? null : (
+                <iframe
+                  src={data.talento_video}
+                  className={styles.talentVideo}
+                />
+              )}
+            </div>
+          </Slide>
+        )}
       </div>
     </Container>
   );
