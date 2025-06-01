@@ -20,7 +20,7 @@ export const Events = () => {
             pagination={{ clickable: true }}
             spaceBetween={50}
             slidesPerView={1}
-            autoplay={{delay: 2000, disableOnInteraction:false}}
+            autoplay={{ delay: 2000, disableOnInteraction: false }}
             loop={true}
           >
             <SwiperSlide>

@@ -31,6 +31,7 @@
 .talentDescription img {
   border-radius: 50%;
   filter: drop-shadow(5px 5px 10px var(--black-secondary));
+  width:100%;
 }
 .talentName {
   color: var(--white-primary);

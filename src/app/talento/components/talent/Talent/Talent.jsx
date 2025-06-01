@@ -1,8 +1,8 @@
 "use client";
 import { useFetch } from "@/hooks";
 import styles from "./styles.module.css";
-import { Container } from "@/components";
 import { Slide } from "react-awesome-reveal";
+import { Container, Loader } from "@/components";
 
 export const Talent = ({ url }) => {
   const { error, data, isLoading } = useFetch({
@@ -11,7 +11,7 @@ export const Talent = ({ url }) => {
   return (
     <Container>
       <div className={`${styles.talentWrapper} smallContainer`}>
-        {!data ? null : (
+        {!data && isLoading ? <Loader /> : (
           <Slide triggerOnce>
             <div className={`${styles.talentDescription}`}>
               <figure>

@@ -1,5 +1,6 @@
 export * from './Events/Events'
 export * from './Talent/Talent'
 export * from './Contact/Contact'
+export * from './Notices/Notices'
 export * from './Products/Products'
 export * from './Jumbotron/Jumbotron'

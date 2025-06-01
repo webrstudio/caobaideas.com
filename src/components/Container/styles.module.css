@@ -1,4 +1,5 @@
 .containerWrapper{
+    border-bottom: 0.5px solid #69696929;
     overflow-x: hidden;
     padding: 8rem 0;
 }

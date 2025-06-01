@@ -1,7 +1,8 @@
 import {
   Jumbotron,
   Talent,
-  Events
+  Events, 
+  Notices
 } from "./components/home";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <Jumbotron />
       <Talent />
       <Events />
+      <Notices />
     </main>
   );
 }
