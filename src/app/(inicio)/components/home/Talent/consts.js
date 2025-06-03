@@ -4,7 +4,7 @@ export const talent = [
   {
     id: 1,
     name: "El Jaivo",
-    image: "/assets/images/talent/jaivo.png",
+    image: "/assets/images/talent/jaivo.jpg",
     link:'/talento/el-jaivo',
     social: [
       {
@@ -24,7 +24,7 @@ export const talent = [
   {
     id: 2,
     name: "Randy",
-    image: "/assets/images/talent/randy.png",
+    image: "/assets/images/talent/randy.jpg",
     link:'/talento/randy',
     social: [
       {
@@ -44,7 +44,7 @@ export const talent = [
   {
     id: 3,
     name: "Willyn K Rollo",
-    image: "/assets/images/talent/willyn.png",
+    image: "/assets/images/talent/willyn.jpg",
     link:'/talento/willyn-k-rollo',
     social: [
       {
@@ -64,7 +64,7 @@ export const talent = [
   {
     id: 4,
     name: "Patitas K Rollo",
-    image: "/assets/images/talent/patitas.png",
+    image: "/assets/images/talent/patitas.jpg",
     link:'/talento/patitas-k-rollo',
     social: [
       {
@@ -84,7 +84,7 @@ export const talent = [
   {
     id: 5,
     name: "Alita",
-    image: "/assets/images/talent/alita.png",
+    image: "/assets/images/talent/alita.jpg",
     link:'/talento/alita',
     social: [
       {
@@ -104,7 +104,7 @@ export const talent = [
   {
     id: 6,
     name: "Meñike",
-    image: "/assets/images/talent/menike.png",
+    image: "/assets/images/talent/menike.jpg",
     link:'/talento/menike',
     social: [
       {

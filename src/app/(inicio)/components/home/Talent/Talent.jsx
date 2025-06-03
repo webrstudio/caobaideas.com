@@ -19,7 +19,7 @@ export const Talent = () => {
             <Slide triggerOnce key={talent.id}>
               <div className={styles.talentCard}>
                 <Link href={talent.link} className={styles.talentImage}>
-                  <img src={talent.image} />
+                  <img src={talent.image} loading='lazy'/>
                 </Link>
                 <div className={styles.talentDescription}>
                   <ul>
