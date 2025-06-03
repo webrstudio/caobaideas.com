@@ -11,7 +11,7 @@ export const NewsLetter = () => {
     evt.preventDefault();
     try {
       const response = await axios.post(
-        `${process.env.NEXT_PUBLIC_LOCAL_API}/newsletter/addNewSuscription/index.php`,
+        `${process.env.NEXT_PUBLIC_API}/newsletter/addNewSuscription/index.php`,
         userInfo
       );
       if (response.status === 200) {
