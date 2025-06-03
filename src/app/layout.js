@@ -1,8 +1,8 @@
 "use client";
 import "./styles/globals.css";
 import { useState, useEffect } from "react";
-import { NavBar, Loader, Footer } from "@/components";
 import { UserProvider, ThemeProvider } from "@/contexts";
+import { NavBar, Loader, Footer, NewsLetter } from "@/components";
 
 export default function RootLayout({ children }) {
   const [loading, setLoading] = useState(true);
@@ -27,6 +27,7 @@ export default function RootLayout({ children }) {
               <>
                 <NavBar />
                 {children}
+                <NewsLetter />
                 <Footer />
               </>
             ) : (

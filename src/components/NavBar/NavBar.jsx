@@ -46,6 +46,11 @@ export const NavBar = () => {
             </Link>
           </li>
           <li>
+            <a href="#newsletter" onClick={activeMenu}>
+              Newsletter
+            </a>
+          </li>
+          <li>
             <button
               className={styles.switchButton}
               onClick={() => {
