@@ -10,23 +10,22 @@
     flex-direction: column;
     gap:1rem;
     height:100%;
-    padding:1rem;
     width:100%;
 }
 .noticeImage{
     display:flex;
-    height:100%;
+    height:300px;
     width:100%;
 }
 .noticeImage img{
     border-radius: 9px;
     height:100%;
-    filter: drop-shadow(-8px 5px 2px #bfbfbf);
-    object-fit: contain;
+    object-fit: cover;
     width:100%;
 }
 .noticeTitle{
     color:var(--white-secondary);
+    padding:1rem 0;
     text-align: center;
 }
 .noticePlaylist{
