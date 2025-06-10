@@ -2,7 +2,9 @@
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { useContext } from "react";
 import styles from "./styles.module.css";
+import { ThemeContext } from "@/contexts";
 import { Slide } from "react-awesome-reveal";
 import { Spotify } from "react-spotify-embed";
 import { Container, Title } from "@/components";
@@ -10,8 +12,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 export const Notices = () => {
+  const { lightMode } = useContext(ThemeContext)
   return (
-    <Container>
+    <Container bgClassName={!lightMode ? 'bgBlackSecondary' : 'bgWhiteSecondary'}>
       <Title title="Últimas noticias" />
       <Slide triggerOnce>
         <div className={`${styles.noticesWrapper} smallContainer`}>

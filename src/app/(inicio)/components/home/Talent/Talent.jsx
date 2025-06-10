@@ -1,14 +1,17 @@
 "use client";
 import Link from "next/link";
 import { talent } from "./consts";
+import { useContext } from "react";
 import styles from "./styles.module.css";
+import { ThemeContext } from "@/contexts";
 import { Slide } from "react-awesome-reveal";
 import { Title, GridContainer } from "@/components";
 
 export const Talent = () => {
+  const { lightMode }= useContext(ThemeContext)
   return (
     <>
-      <section className={styles.talentWrapper} id="talento">
+      <section className={`${styles.talentWrapper} ${!lightMode ? 'bgBlackSecondary': 'bgWhiteSecondary'}`} id="talento">
         <div className={styles.talentBackground}>
           <div className={`${styles.circle} ${styles.circle1}`}></div>
           <div className={`${styles.circle} ${styles.circle2}`}></div>

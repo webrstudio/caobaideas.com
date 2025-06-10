@@ -20,7 +20,7 @@ html {
 /*ui colors*/
 :root {
   --black-primary: #070707;
-   --black-secondary: #1c1c1c;
+  --black-secondary: #131313;
   --blue-primary: #060e86;
   --box-shadow: #0000005d;
   --gray-primary: #6b6b6b;
@@ -28,7 +28,7 @@ html {
   --purple-secondary: #765cdf;
   --red-primary: #e82925;
   --white-primary: #fffbf9;
-  --white-secondary: #e2e2e2;
+  --white-secondary: #eeeeee;
   --yellow-primary: #ffde59;
   --yellow-secondary: #ffde59;
 }
@@ -63,8 +63,16 @@ html {
   transition: all 300ms ease;
 }
 /*dark mode*/
-.darkMode{
+.darkMode {
   background: var(--black-primary);
   color: var(--white-secondary);
   transition: all 300ms ease;
+}
+/*bgWhiteSecondary*/
+.bgWhiteSecondary {
+  background: var(--white-secondary);
+}
+/*bgBlackSecondary*/
+.bgBlackSecondary {
+  background: var(--black-secondary);
 }
