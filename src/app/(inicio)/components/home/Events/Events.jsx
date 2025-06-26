@@ -25,12 +25,17 @@ export const Events = () => {
           >
             <SwiperSlide>
               <figure className={`${styles.imageEvent}`}>
-                <img src="https://caobaideas.com/wp-content/uploads/2024/12/MesmoRollo-cdmx-2025-1729x2048.jpeg" />
+                <img src={`${process.env.NEXT_PUBLIC_SERVER_NAME}/event-images/event-1.jpg`} />
               </figure>
             </SwiperSlide>
             <SwiperSlide>
               <figure className={styles.imageEvent}>
-                <img src="https://caobaideas.com/wp-content/uploads/2024/12/CONVIVENCIA-wilyn-patitas-poster-ULTIMOS-BOLETOS.png" />
+                <img src={`${process.env.NEXT_PUBLIC_SERVER_NAME}/event-images/event-2.jpg`} />
+              </figure>
+            </SwiperSlide>
+            <SwiperSlide>
+              <figure className={styles.imageEvent}>
+                <img src={`${process.env.NEXT_PUBLIC_SERVER_NAME}/event-images/event-3.jpg`} />
               </figure>
             </SwiperSlide>
           </Swiper>
