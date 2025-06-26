@@ -36,16 +36,6 @@ export const NavBar = () => {
             </li>
           )}
           <li>
-            <Link href="/" onClick={activeMenu}>
-              Contacto
-            </Link>
-          </li>
-          <li>
-            <Link href="/" onClick={activeMenu}>
-              Nosotros
-            </Link>
-          </li>
-          <li>
             <a href="#newsletter" onClick={activeMenu}>
               Newsletter
             </a>

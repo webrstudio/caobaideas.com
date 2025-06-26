@@ -6,7 +6,7 @@ export const Footer = () => {
       <p>
         &copy; CAOBA MEDIA & MANAGMENT - 2025
       </p>
-      <a href=''>
+      <a href='https://webrstudio.com' target="_blank">
         Desarrollado por WEBRSTUDIO
       </a>
     </footer>
