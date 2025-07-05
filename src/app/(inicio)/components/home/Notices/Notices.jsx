@@ -17,6 +17,11 @@ export const Notices = () => {
   const { isLoading, data } = useFetch({
     url: `${process.env.NEXT_PUBLIC_API}/posts/getAllPosts/index.php`,
   });
+
+  if (isLoading || !data || data.length === 0) {
+    return null;
+  }
+
   return (
     <Container
       bgClassName={!lightMode ? "bgBlackSecondary" : "bgWhiteSecondary"}

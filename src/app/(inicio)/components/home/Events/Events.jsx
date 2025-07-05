@@ -8,13 +8,16 @@ import { Slide } from "react-awesome-reveal";
 import { Container, Title } from "@/components";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import Link from "next/link";
 
 export const Events = () => {
   const { isLoading, data } = useFetch({
     url: `${process.env.NEXT_PUBLIC_API}/events/getAllEvents/index.php`,
   });
-  console.log(data);
+
+  if (isLoading || !data || data.length === 0) {
+    return null;
+  }
+
   return (
     <Container>
       <Title title="Eventos" />
@@ -22,26 +25,25 @@ export const Events = () => {
         <div className="smallContainer">
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
-            navigation
+            navigation={true}
             pagination={{ clickable: true }}
-            spaceBetween={50}
-            slidesPerView={1}
             autoplay={{ delay: 2000, disableOnInteraction: false }}
             loop={true}
+            spaceBetween={50}
+            slidesPerView={1}
           >
-            {isLoading && !data
-              ? null
-              : data.map((event) => (
-                  <SwiperSlide key={event.evento_id}>
-                    <a href={event.evento_link} target="_blank">
-                      <figure className={`${styles.imageEvent}`}>
-                        <img
-                          src={`${process.env.NEXT_PUBLIC_SERVER_NAME}/event-images/${event.evento_imagen}`}
-                        />
-                      </figure>
-                    </a>
-                  </SwiperSlide>
-                ))}
+            {data.map((event) => (
+              <SwiperSlide key={event.evento_id}>
+                <a href={event.evento_link} target="_blank">
+                  <figure className={styles.imageEvent}>
+                    <img
+                      src={`${process.env.NEXT_PUBLIC_SERVER_NAME}/event-images/${event.evento_imagen}`}
+                      alt=""
+                    />
+                  </figure>
+                </a>
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </Slide>
